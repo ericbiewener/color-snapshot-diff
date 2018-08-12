@@ -1,0 +1,6 @@
+{
+  "extends": "ericbiewener",
+  "env": {
+    "node": true
+  }
+}
