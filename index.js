@@ -5,9 +5,10 @@ const chalk = require('chalk')
 let str = ''
 const text = fs.readFileSync(path.join(__dirname, 'source.js'), 'utf-8')
 for (const line of text.split('\n')) {
-  str += line.startsWith('- ')
+  const trimmedLine = line.trim()
+  str += trimmedLine.startsWith('- ')
     ? chalk.green(line)
-    : line.startsWith('+ ')
+    : trimmedLine.startsWith('+ ')
       ? chalk.red(line)
       : line
 
